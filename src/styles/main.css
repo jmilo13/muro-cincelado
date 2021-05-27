@@ -1,1 +1,5 @@
-
+:root {
+  --letter-color: black;
+  --primary-color: red;
+  --background-nav: white;
+}

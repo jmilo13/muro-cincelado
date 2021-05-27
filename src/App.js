@@ -1,11 +1,17 @@
 import React from 'react'
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
+import Home from './pages/Home'
 
-function App () {
+class App extends React.Component {
+    render(){
     return (
-        <section>
-            <h1>Hola Mundo Genial</h1>
-        </section>
+        <BrowserRouter>
+        <Switch>
+            <Route exact path="/dist/index.html" component={Home} />
+        </Switch>
+        </BrowserRouter>
     )
+    }
 }
 
 export default App
