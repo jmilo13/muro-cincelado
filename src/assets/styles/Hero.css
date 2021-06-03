@@ -1,5 +1,7 @@
 .hero {
+  display: flex;
   position: relative;
+  min-height: 25rem;
   padding: 2rem;
   color: var(--letter-on-dark);
   background: url(@images/hero-image.jpg) center/cover no-repeat;
@@ -37,4 +39,9 @@
   text-decoration: none;
   color: var(--letter-on-dark);
   border-radius: 0.8rem;
+}
+@media (max-width: 59rem) {
+  .hero {
+    min-height: 24rem;
+  }
 }

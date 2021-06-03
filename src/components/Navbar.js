@@ -15,12 +15,19 @@ class Navbar extends React.Component {
         return (
             <nav className="navbar">
                 <img className="navbar__logo" src={this.props.src} />
-                <ul className="navbar__menu">
-                    <li className="navbar__element"><Link to="#">Inicio</Link></li>
-                    <li className="navbar__element"><Link to="#">Ps. Camilo Gonzalez</Link></li>
-                    <li className="navbar__element"><Link to="#">¿Cómo me atiendo?</Link></li>
-                    <li className="navbar__element"><Link to="#">Pedir Turno</Link></li>
-                </ul>
+                <div className="navbar__menu">
+                    <ul className="navbar__list-elements">
+                        <li className="navbar__element"><Link to="#">Inicio</Link></li>
+                        <li className="navbar__element"><Link to="#">Ps. Camilo Gonzalez</Link></li>
+                        <li className="navbar__element"><Link to="#">¿Cómo me atiendo?</Link></li>
+                        <li className="navbar__element"><Link to="#">Pedir Turno</Link></li>
+                    </ul>
+                    <div className="navbar__social">
+                        <a href=""><img src={this.props.socialOne} className="navbar__media"/></a>
+                        <a href=""><img src={this.props.socialTwo} className="navbar__media" /></a>
+                        <a href=""><img src={this.props.socialThree} className="navbar__media" /></a>
+                    </div>
+                </div>
                 <button className="navbar__button-menu" type="button" onClick={this.handleClick}></button>
             </nav>
         )
