@@ -10,6 +10,12 @@ module.exports = {
         filename: '[name].[contenthash].js',
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
+    resolve: {
+        alias: {
+            '@icons': path.resolve(__dirname, 'src/assets/icons'),
+            '@images': path.resolve(__dirname, 'src/assets/images/'),
+        }
+    },
     module: {
         rules: [
             {
@@ -21,10 +27,16 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
+                use: [
+                    {
+                       loader: MiniCssExtractPlugin.loader,
+                       options: {publicPath: path.relative(__dirname, '../')},
+                    },
+                    'css-loader',
+                   ],
             },
             {
-                test: /\.(png|jpg|jpge)$/,
+                test: /\.(png|jpg|jpge|svg)$/,
                 type: 'asset/resource'
             },
         ]

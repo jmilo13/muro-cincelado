@@ -1,85 +1,28 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import logo from '../assets/images/superhero.png'
+import logo from '@images/logo.png'
+import Hero from '../components/Hero'
+import ServiceCard from '../components/ServiceCard'
+import person from '@images/person.svg'
+import group from '@images/group.svg'
 
 class Home extends React.Component {
     render(){
         return (
-            <section>
+            <section> 
                 <Navbar src={logo}/>
-                {/* <p>La Gran Pregunta
-Usar unidades em y rem nos da flexibilidad en nuestros diseños, y la capacidad de escalar elementos hacia arriba y hacia abajo, en lugar de estar estancados en tamaños fijos. Podemos usar ésta flexibilidad para hacer nuestros diseños más fáciles de ajustar durante el desarrollo, más responsivo, y para permitir a usuarios de navegador controlar la escala general de sitios para máxima legibilidad.
-
-Las dos unidades em y rem proporcionan ésta flexibilidad y trabajar de formas similares, así que la gran pregunta es, ¿cuándo deberíamos usar valores em y cuando debemos usar valores rem?
-
-Diferencia Crucial
-La diferencia entre las unidades em y rem es como el navegador determina el valor px al  que se están traduciendo. Entender ésta diferencia es la clave para determinar cuando usar cada unidad.
-
-Vamos a comenzar sobre como trabajan las unidades rem y em desde cero para asegurarnos que conozcas cada detalle. Luego nos moveremos a por qué debes usar unidades em o rem.
-
-Finalmente veremos la aplicación práctica de exactamente en que elementos de un diseño típico  deberías usar cada tipo de unidad.La Gran Pregunta
-Usar unidades em y rem nos da flexibilidad en nuestros diseños, y la capacidad de escalar elementos hacia arriba y hacia abajo, en lugar de estar estancados en tamaños fijos. Podemos usar ésta flexibilidad para hacer nuestros diseños más fáciles de ajustar durante el desarrollo, más responsivo, y para permitir a usuarios de navegador controlar la escala general de sitios para máxima legibilidad.
-
-Las dos unidades em y rem proporcionan ésta flexibilidad y trabajar de formas similares, así que la gran pregunta es, ¿cuándo deberíamos usar valores em y cuando debemos usar valores rem?
-
-Diferencia Crucial
-La diferencia entre las unidades em y rem es como el navegador determina el valor px al  que se están traduciendo. Entender ésta diferencia es la clave para determinar cuando usar cada unidad.
-
-Vamos a comenzar sobre como trabajan las unidades rem y em desde cero para asegurarnos que conozcas cada detalle. Luego nos moveremos a por qué debes usar unidades em o rem.
-
-Finalmente veremos la aplicación práctica de exactamente en que elementos de un diseño típico  deberías usar cada tipo de unidad.La Gran Pregunta
-Usar unidades em y rem nos da flexibilidad en nuestros diseños, y la capacidad de escalar elementos hacia arriba y hacia abajo, en lugar de estar estancados en tamaños fijos. Podemos usar ésta flexibilidad para hacer nuestros diseños más fáciles de ajustar durante el desarrollo, más responsivo, y para permitir a usuarios de navegador controlar la escala general de sitios para máxima legibilidad.
-
-Las dos unidades em y rem proporcionan ésta flexibilidad y trabajar de formas similares, así que la gran pregunta es, ¿cuándo deberíamos usar valores em y cuando debemos usar valores rem?
-
-Diferencia Crucial
-La diferencia entre las unidades em y rem es como el navegador determina el valor px al  que se están traduciendo. Entender ésta diferencia es la clave para determinar cuando usar cada unidad.
-
-Vamos a comenzar sobre como trabajan las unidades rem y em desde cero para asegurarnos que conozcas cada detalle. Luego nos moveremos a por qué debes usar unidades em o rem.
-
-Finalmente veremos la aplicación práctica de exactamente en que elementos de un diseño típico  deberías usar cada tipo de unidad.La Gran Pregunta
-Usar unidades em y rem nos da flexibilidad en nuestros diseños, y la capacidad de escalar elementos hacia arriba y hacia abajo, en lugar de estar estancados en tamaños fijos. Podemos usar ésta flexibilidad para hacer nuestros diseños más fáciles de ajustar durante el desarrollo, más responsivo, y para permitir a usuarios de navegador controlar la escala general de sitios para máxima legibilidad.
-
-Las dos unidades em y rem proporcionan ésta flexibilidad y trabajar de formas similares, así que la gran pregunta es, ¿cuándo deberíamos usar valores em y cuando debemos usar valores rem?
-
-Diferencia Crucial
-La diferencia entre las unidades em y rem es como el navegador determina el valor px al  que se están traduciendo. Entender ésta diferencia es la clave para determinar cuando usar cada unidad.
-
-Vamos a comenzar sobre como trabajan las unidades rem y em desde cero para asegurarnos que conozcas cada detalle. Luego nos moveremos a por qué debes usar unidades em o rem.
-
-Finalmente veremos la aplicación práctica de exactamente en que elementos de un diseño típico  deberías usar cada tipo de unidad.La Gran Pregunta
-Usar unidades em y rem nos da flexibilidad en nuestros diseños, y la capacidad de escalar elementos hacia arriba y hacia abajo, en lugar de estar estancados en tamaños fijos. Podemos usar ésta flexibilidad para hacer nuestros diseños más fáciles de ajustar durante el desarrollo, más responsivo, y para permitir a usuarios de navegador controlar la escala general de sitios para máxima legibilidad.
-
-Las dos unidades em y rem proporcionan ésta flexibilidad y trabajar de formas similares, así que la gran pregunta es, ¿cuándo deberíamos usar valores em y cuando debemos usar valores rem?
-
-Diferencia Crucial
-La diferencia entre las unidades em y rem es como el navegador determina el valor px al  que se están traduciendo. Entender ésta diferencia es la clave para determinar cuando usar cada unidad.
-
-Vamos a comenzar sobre como trabajan las unidades rem y em desde cero para asegurarnos que conozcas cada detalle. Luego nos moveremos a por qué debes usar unidades em o rem.
-
-Finalmente veremos la aplicación práctica de exactamente en que elementos de un diseño típico  deberías usar cada tipo de unidad.La Gran Pregunta
-Usar unidades em y rem nos da flexibilidad en nuestros diseños, y la capacidad de escalar elementos hacia arriba y hacia abajo, en lugar de estar estancados en tamaños fijos. Podemos usar ésta flexibilidad para hacer nuestros diseños más fáciles de ajustar durante el desarrollo, más responsivo, y para permitir a usuarios de navegador controlar la escala general de sitios para máxima legibilidad.
-
-Las dos unidades em y rem proporcionan ésta flexibilidad y trabajar de formas similares, así que la gran pregunta es, ¿cuándo deberíamos usar valores em y cuando debemos usar valores rem?
-
-Diferencia Crucial
-La diferencia entre las unidades em y rem es como el navegador determina el valor px al  que se están traduciendo. Entender ésta diferencia es la clave para determinar cuando usar cada unidad.
-
-Vamos a comenzar sobre como trabajan las unidades rem y em desde cero para asegurarnos que conozcas cada detalle. Luego nos moveremos a por qué debes usar unidades em o rem.
-
-Finalmente veremos la aplicación práctica de exactamente en que elementos de un diseño típico  deberías usar cada tipo de unidad.La Gran Pregunta
-Usar unidades em y rem nos da flexibilidad en nuestros diseños, y la capacidad de escalar elementos hacia arriba y hacia abajo, en lugar de estar estancados en tamaños fijos. Podemos usar ésta flexibilidad para hacer nuestros diseños más fáciles de ajustar durante el desarrollo, más responsivo, y para permitir a usuarios de navegador controlar la escala general de sitios para máxima legibilidad.
-
-Las dos unidades em y rem proporcionan ésta flexibilidad y trabajar de formas similares, así que la gran pregunta es, ¿cuándo deberíamos usar valores em y cuando debemos usar valores rem?
-
-Diferencia Crucial
-La diferencia entre las unidades em y rem es como el navegador determina el valor px al  que se están traduciendo. Entender ésta diferencia es la clave para determinar cuando usar cada unidad.
-
-Vamos a comenzar sobre como trabajan las unidades rem y em desde cero para asegurarnos que conozcas cada detalle. Luego nos moveremos a por qué debes usar unidades em o rem.
-
-Finalmente veremos la aplicación práctica de exactamente en que elementos de un diseño típico  deberías usar cada tipo de unidad.
-</p> */}
-
+                <Hero 
+                    title="Psicoterapia"
+                    subtitle="¿Necesitas apoyo?"
+                    buttonText="Pedir turno">
+                    Esta es una herramienta efectiva para el tratamiento de dificultades a nivel emocional o psicológico, que afectan la relacion con nosotros mismos y nuestro entorno. 
+                </Hero>
+                <ServiceCard src={person} title="Terapia Individual">
+                    Orientada a tratar cualquir tipo de malestar psicológico, con el fin de mejorar la calidad de vida y las relaciones interpersonales del consultante.
+                </ServiceCard>
+                <ServiceCard src={group} title="Terapia Relacional">
+                    Orientada a abordar dificultades a nivel vincular con una perspectiva respetuosa a la diversidad relacional, sexual y de género.
+                </ServiceCard>
             </section>
         )
     }

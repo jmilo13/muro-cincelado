@@ -1,0 +1,15 @@
+:root {
+  --letter-on-white: #17202a;
+  --letter-on-dark: #fdfefe;
+  --primary-color: #c60055;
+  --background-nav: #f5eef8;
+  --background-body: #f5eef8;
+}
+* {
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  color: (var(--letter-color));
+  background-color: var(--background-body);
+}
