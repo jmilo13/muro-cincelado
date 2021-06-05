@@ -25,20 +25,11 @@
 }
 .hero__title {
   font-size: 2rem;
+  transition: all 1.5s;
 }
 .hero__text {
   font-size: 1.1rem;
   margin: 1rem;
-}
-.hero__button {
-  display: block;
-  max-width: max-content;
-  padding: 1rem 2rem;
-  margin: auto;
-  background: var(--primary-color);
-  text-decoration: none;
-  color: var(--letter-on-dark);
-  border-radius: 0.8rem;
 }
 @media (max-width: 59rem) {
   .hero {

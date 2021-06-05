@@ -4,7 +4,7 @@ import '../assets/styles/Navbar.css'
 
 class Navbar extends React.Component {
     handleClick(){
-        const menu = document.querySelector('.navbar__menu')
+        const menu = document.querySelector('.navbar')
         const button = document.querySelector('.navbar__button-menu')
         const styleTransform = menu.style.transform
         console.log(menu.style.transform)
@@ -13,11 +13,11 @@ class Navbar extends React.Component {
     }
     render(){
         return (
-            <nav className="navbar">
-                <img className="navbar__logo" src={this.props.src} />
-                <div className="navbar__menu">
+            <header className="header">
+                <Link to="/"><img className="header__logo" src={this.props.src} /></Link>
+                <div className="navbar">
                     <ul className="navbar__list-elements">
-                        <li className="navbar__element"><Link to="#">Inicio</Link></li>
+                        <li className="navbar__element"><Link to="/">Inicio</Link></li>
                         <li className="navbar__element"><Link to="#">Ps. Camilo Gonzalez</Link></li>
                         <li className="navbar__element"><Link to="#">¿Cómo me atiendo?</Link></li>
                         <li className="navbar__element"><Link to="#">Pedir Turno</Link></li>
@@ -29,7 +29,7 @@ class Navbar extends React.Component {
                     </div>
                 </div>
                 <button className="navbar__button-menu" type="button" onClick={this.handleClick}></button>
-            </nav>
+            </header>
         )
     }
 }

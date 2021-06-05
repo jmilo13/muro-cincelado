@@ -1,0 +1,21 @@
+.presentation {
+  padding: 2.5rem;
+  background: var(--secondary-color);
+  text-align: center;
+  color: var(--letter-on-dark);
+}
+.presentation__image-container {
+  width: 100%;
+  max-width: 18rem;
+  margin: 2rem auto;
+}
+.presentation__image {
+  width: 100%;
+  border-radius: 50%;
+}
+.presentation__caption {
+  margin: 1rem 0;
+}
+.presentation__invitation {
+  margin: 1.5 0;
+}

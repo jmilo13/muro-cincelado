@@ -57,8 +57,8 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
         historyApiFallback: true,
-        host: '192.168.0.144',
-        port: 3006,
+        host: '192.168.0.240',
+        port: 3005,
         open: true,
     }
 }

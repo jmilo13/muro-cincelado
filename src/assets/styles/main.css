@@ -4,12 +4,19 @@
   --primary-color: #c60055;
   --background-nav: #f5eef8;
   --background-body: #f5eef8;
+  --secondary-color: #1f092bf2;
 }
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: sans-serif;
+  line-height: 1.4;
   color: (var(--letter-color));
   background-color: var(--background-body);
+}
+a:hover {
+  color: var(--primary-color);
 }

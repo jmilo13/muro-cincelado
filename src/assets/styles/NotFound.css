@@ -1,0 +1,17 @@
+.not-found {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+.not-found__image {
+  max-width: 30rem;
+}
+.not-found__description {
+  max-width: 20rem;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
