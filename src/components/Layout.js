@@ -19,14 +19,20 @@ export default function Layout (props) {
             <Navbar 
                 src={logo} 
                 socialOne={facebookD} 
+                linkOne= 'https://www.facebook.com/murocincelado.psicoterapia/'
                 socialTwo={instagramD} 
+                linkTwo= 'https://www.instagram.com/murocincelado.psicoterapia/'
                 socialThree={twitterD}
+                linkThree= 'https://twitter.com/murocincelado'
             />
                 {props.children}
             <Footer 
                 socialOne={facebookC} 
+                linkOne= 'https://www.facebook.com/murocincelado.psicoterapia/'
                 socialTwo={instagramC} 
+                linkTwo= 'https://www.instagram.com/murocincelado.psicoterapia/'
                 socialThree={twitterC}
+                linkThree= 'https://twitter.com/murocincelado'
                 location='Ciudad autónoma de Buenos Aires, Argentina'
                 email='hola@murocincelado.com'
                 license='https://creativecommons.org/licenses/by-sa/4.0/'

@@ -1,0 +1,48 @@
+{
+    "info": {
+      "count": 5
+    },
+    "posts": [
+      {
+        "id": 1,
+        "name": "Rick Sanchez",
+        "autor": "Alive",
+        "date": "Human",
+        "image": "",
+        "tags": "Male"
+      },
+      {
+        "id": 2,
+        "name": "Rick Sanchez",
+        "autor": "Alive",
+        "date": "Human",
+        "image": "",
+        "tags": "Male"
+      },
+      {
+        "id": 3,
+        "name": "Rick Sanchez",
+        "autor": "Alive",
+        "date": "Human",
+        "image": "",
+        "tags": "Male"
+      },
+      {
+        "id": 4,
+        "name": "Rick Sanchez",
+        "autor": "Alive",
+        "date": "Human",
+        "image": "",
+        "tags": "Male"
+      },
+      {
+        "id": 5,
+        "name": "Rick Sanchez",
+        "autor": "Alive",
+        "date": "Human",
+        "image": "",
+        "tags": "Male"
+      }
+      
+    ]
+  }

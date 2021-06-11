@@ -15,7 +15,7 @@ import '../assets/styles/Home.css'
 export default class Home extends React.Component {
     render(){
         return (
-            <main className="home-container"> 
+            <main className="main"> 
                 <Hero 
                     title="Psicoterapia"
                     subtitle="¿Necesitas apoyo?"
@@ -29,7 +29,7 @@ export default class Home extends React.Component {
                     src={profilePicture}   
                     studies="Psicologo de la Universidad Santo Tomas. Bogotá D.C. Colombia"
                     invitation="Te invito a leer un poco sobre mi"
-                    link="./ps-camilo-gonzalez"         
+                    link="./psicologo-camilo-gonzalez"         
                 />
                 <NoticeCard
                     title="Situación COVID"    

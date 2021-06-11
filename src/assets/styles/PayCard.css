@@ -1,0 +1,10 @@
+.pay-card {
+  width: 13rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: solid 1px;
+  border-radius: 0.8rem;
+}
+.pay-card__button a {
+  margin-left: 0;
+}

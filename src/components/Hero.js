@@ -13,6 +13,7 @@ export default function Hero (props) {
                     <CallToAction
                         link="https://wa.me/message/LBT3GA3KFI23E1"
                         text={buttonText}
+                        external={true}
                     />
                 </div>
  
