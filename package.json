@@ -8,8 +8,7 @@
     "dev": "next",
     "dev:inspect": "npm --node-options=--inspect=0.0.0.0:9229 run dev",
     "build": "next build",
-    "start": "next start",
-    "server": "webpack serve --open --mode development --host 192.168.0.144"
+    "start": "next start"
   },
   "keywords": [],
   "author": "",
