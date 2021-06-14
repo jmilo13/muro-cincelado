@@ -15,6 +15,9 @@ export default function Service () {
                     {`
                     .card-service-container {
                         margin: 2rem 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-evenly;
                     }
                     `}
                 </style>

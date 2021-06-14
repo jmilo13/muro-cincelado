@@ -35,7 +35,7 @@ export default function Layout (props) {
                 socialThree={twitterC}
                 linkThree= 'https://twitter.com/murocincelado'
                 location='Ciudad autónoma de Buenos Aires, Argentina'
-                email='hola@murocincelado.com'
+                email='murocincelado@gmail.com'
                 license='https://creativecommons.org/licenses/by-sa/4.0/'
                 imageLicense={license}
                 icons={freepik}

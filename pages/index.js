@@ -28,7 +28,7 @@ export default class Home extends React.Component {
                     title="Situación COVID"    
                     src={'/images/covid.svg'}   
                     alt="joven_con_mascarilla"
-                    link="/modalidad-intervencion"   
+                    link="/modalidad-de-intervencion"   
                 >
                     Para garantizar la seguridad de los consultantes en el marco de la pandemia por COVID-19 se ha implementado la atención remota a través de videollamada por medio de Whatsapp. Si deseas mayor información te invito a leer los pasos para agendar tu cita.
                 </NoticeCard>

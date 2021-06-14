@@ -1,0 +1,8 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/psicologo-camilo-gonzalez": "pages/psicologo-camilo-gonzalez.js",
+  "/modalidad-de-intervencion": "pages/modalidad-de-intervencion.js",
+  "/": "pages/index.js"
+}
