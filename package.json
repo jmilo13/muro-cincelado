@@ -5,31 +5,34 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack serve --config webpack.config.dev.js",
+    "dev": "next",
+    "dev:inspect": "npm --node-options=--inspect=0.0.0.0:9229 run dev",
+    "build": "next build",
+    "start": "next start",
     "server": "webpack serve --open --mode development --host 192.168.0.144"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/plugin-transform-runtime": "^7.14.3",
-    "@babel/preset-env": "^7.14.2",
-    "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "*",
-    "css-loader": "^5.2.6",
-    "html-webpack-plugin": "^5.3.1",
-    "mini-css-extract-plugin": "^1.6.0",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
-  },
   "dependencies": {
-    "@babel/preset-react": "^7.13.13",
+    "babel-plugin-inline-import": "^3.0.0",
+    "next": "^10.2.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0"
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.1",
+    "pretty-quick": "^3.1.0"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && yarn type-check"
+    }
   }
 }
