@@ -1,5 +1,5 @@
 import { IncomingMessage, ServerResponse } from 'http'
-import Database from '/Users/camil/Desktop/proyects/muroCinceladoReact/database/db'
+import Database from '@database/db'
 
 const allPosts = async (request = IncomingMessage, response = ServerResponse) => {
     const slug = request.query.slug
