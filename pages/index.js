@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 import Hero from '@components/Hero'
 import Services from '@components/Services'
@@ -8,6 +9,11 @@ import NoticeCard from '@components/NoticeCard'
 export default class Home extends React.Component {
     render(){
         return (
+            <React.Fragment>
+            <Head>
+                <title>Muro Cincelado - Inicio</title>
+                <meta name="description" content="La psicoterapia es una herramienta efectiva para el tratamiento de dificultades a nivel emocional o psicológico. Aquí podras encontrar apoyo y orientación especialmente sobre la diversidad en la sexualidad humana."></meta>
+            </Head>
             <main className="main"> 
                 <Hero 
                     title="Psicoterapia"
@@ -42,6 +48,7 @@ export default class Home extends React.Component {
                     `}
                 </style>
             </main>
+            </React.Fragment>
         )
     }
 }

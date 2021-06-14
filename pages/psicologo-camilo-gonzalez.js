@@ -1,8 +1,14 @@
 import React from 'react'
+import Head from 'next/head'
 import Link from 'next/link'
 
 const Autor = () => {
         return (
+            <React.Fragment>
+            <Head>
+                <title>Ps. Camilo Gonzalez</title>
+                <meta name="description" content="Psicólogo egrsado de la Universidad Santo Tomas, Bogotá, Colombia. Con experiencia en el abordaje de temas relacionados a la sexualidad humana en su diversidad de géneros, orientaciones y organizaciones relacionales."></meta>
+            </Head>
             <main className="main"> 
                 <article className="autor">
                     <img src={'/images/profile-picture.jpg'} alt="Camilo Gonzalez" className="autor__image"/>
@@ -83,6 +89,7 @@ const Autor = () => {
                     `}
                 </style>
             </main>
+            </React.Fragment>
         )
 }
 

@@ -1,9 +1,16 @@
 import React from 'react'
+import Head from 'next/head'
 import CallToAction from '@components/CallToAction'
 import PayCard from '@components/PayCard'
 
 const Atention = () => {
         return (
+            
+            <React.Fragment>
+            <Head>
+                <title>Modalidad de intervención</title>
+                <meta name="description" content="Aquí encontrarás una guía para concertar tu cita y la modalidad de atención remota, en relación a la pandemia de COVID-19."></meta>
+            </Head>
             <main className="main"> 
                 <article className="atention">
                     <h1 className="atention__title">Modalidad de intervención</h1>
@@ -66,6 +73,7 @@ const Atention = () => {
                     `}
                 </style>
             </main>
+            </React.Fragment>
         )
 }
 
