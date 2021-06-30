@@ -11,7 +11,7 @@ export default function Custom404() {
         <section className="not-found">
             <img className="not-found__image" src='/images/404.svg' alt="404_página_no_encontrada"></img>
             <div className="not-found__description-container">
-                <h2 className="not-found__aditional-description">La sección de blog volverá el 20 de junio 2021</h2>
+                <h2 className="not-found__aditional-description">La sección de blog volverá el 20 de julio 2021</h2>
                 <h3 className="not-found__description">Disculpa, la página que estas buscando no está disponible. Visita otra en el menú superior</h3>
             </div>
             <style jsx>
