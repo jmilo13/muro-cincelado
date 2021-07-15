@@ -6,7 +6,6 @@ export default function TopUp () {
 
         const handleClick = () => {
             window.scroll(0, 0)
-            console.log('oprimido')
         }
 
     return (

@@ -4,7 +4,9 @@ import Link from 'next/link'
 
 class Navbar extends React.Component {
     handleClick(){
-        if (screen.width < 945) {
+      console.log('oprimido fuer del if')
+        if (window.innerWidth < 945) {
+          console.log('oprimido')
             const menu = document.querySelector('.navbar')
             const button = document.querySelector('.navbar__button-menu')
             const styleTransform = menu.style.transform
@@ -144,6 +146,7 @@ class Navbar extends React.Component {
                               height: 2rem;
                               border: none;
                               background: url('/icons/icon-menu.svg') center/cover no-repeat;
+                              cursor: pointer;
                             }
                             .navbar__button-close {
                               background: url('/icons/icon-close.svg') center/cover no-repeat; 
