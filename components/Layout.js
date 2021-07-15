@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import TopUp from './TopUp'
 
 const logo = '/images/logo.png'
 const facebookD = '/icons/icon-facebook-dark.svg'
@@ -12,11 +13,11 @@ const twitterC = '/icons/icon-twitter-clear.svg'
 const license = '/images/content-license.png'
 const freepik = '/images/freepik.svg'
 const storyset = '/images/storyset.svg'
-// import '../assets/styles/Home.css'
 
 export default function Layout (props) {
     return (
         <React.Fragment> 
+            <TopUp/>
             <Navbar 
                 src={logo} 
                 socialOne={facebookD} 

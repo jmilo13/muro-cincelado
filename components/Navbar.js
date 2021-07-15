@@ -58,6 +58,7 @@ class Navbar extends React.Component {
                             max-height: 4rem;
                             max-width: 70%;
                             transition: all 0.5s;
+                            cursor: pointer;
                           }
                           .header__logo:hover {
                             opacity: 0.7;
@@ -70,6 +71,7 @@ class Navbar extends React.Component {
                           .navbar__list-elements {
                             display: flex;
                             width: 90%;
+                            max-width: 45rem;
                             justify-content: space-between;
                             align-items: center;
                             text-align: center;

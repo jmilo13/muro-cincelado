@@ -36,7 +36,7 @@ export default function Footer (props) {
                 .footer {
                     display: flex;
                     padding: 2rem;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
                     background-color: var(--secondary-color);
                     color: var(--letter-on-dark);
                     }
