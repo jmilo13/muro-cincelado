@@ -5,8 +5,12 @@ import Hero from '@components/Hero'
 import Services from '@components/Services'
 import PresentationCard from '@components/PresentationCard'
 import NoticeCard from '@components/NoticeCard'
+import { getAllFilesMetadata } from 'lib/mdx'
 
 export default class Home extends React.Component {
+    constructor(props){
+        super(props)
+    }
     render(){
         return (
             <React.Fragment>
@@ -50,5 +54,12 @@ export default class Home extends React.Component {
             </main>
             </React.Fragment>
         )
+    }
+}
+
+export async function getStaticProps(){
+    const posts = await getAllFilesMetadata()
+    return {
+        props: {posts}
     }
 }
