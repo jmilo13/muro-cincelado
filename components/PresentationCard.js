@@ -1,5 +1,6 @@
 import React from 'react'
 import CallToAction from './CallToAction'
+import AutorImage from './AutorImage'
 
 export default function PresentationCard (props) {
     const { name, src, studies, invitation, link } = props
@@ -9,7 +10,7 @@ export default function PresentationCard (props) {
                     {name}
                 </h2>
                 <figure className="presentation__image-container">
-                    <img className="presentation__image" src={src} alt={name}/>
+                    <AutorImage src={src} alt={name} />
                     <figcaption className="presentation__caption">{studies}</figcaption>
                 </figure>
                 <p className="presentation__invitation">{invitation}</p>
@@ -29,10 +30,6 @@ export default function PresentationCard (props) {
                     width: 100%;
                     max-width: 18rem;
                     margin: 2rem auto;
-                    }
-                    .presentation__image {
-                    width: 100%;
-                    border-radius: 50%;
                     }
                     .presentation__caption {
                     margin: 1rem 0;

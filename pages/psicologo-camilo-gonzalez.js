@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import AutorImage from '@components/AutorImage'
 
 const Autor = () => {
         return (
@@ -11,7 +12,7 @@ const Autor = () => {
             </Head>
             <main className="main"> 
                 <article className="autor">
-                    <img src={'/images/profile-picture.jpg'} alt="Camilo Gonzalez" className="autor__image"/>
+                    <AutorImage src='/images/profile-picture.jpg' alt="Camilo Gonzalez" />
                     <h1 className="autor__title">Ps. Camilo Gonzalez</h1>
                     <div className="autor__description">
                         <p>
@@ -76,11 +77,6 @@ const Autor = () => {
                     max-width: 60rem;
                     margin: auto;
                     padding: 3rem 2rem;
-                    }
-                    .autor__image {
-                    max-width: 15rem;
-                    border-radius: 50%;
-                    margin: 1rem;
                     }
                     .autor__title {
                     margin: 1rem 0;

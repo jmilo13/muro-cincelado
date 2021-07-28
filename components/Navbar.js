@@ -79,6 +79,10 @@ class Navbar extends React.Component {
                             text-align: center;
                             list-style: none;
                           }
+                          .navbar__element {
+                            padding: 1rem;
+                            text-align: center;
+                          }
                           .navbar__element a {
                             text-decoration: none;
                             color: var(--letter-on-white);
@@ -94,6 +98,7 @@ class Navbar extends React.Component {
                             display: flex;
                             justify-content: space-between;
                             margin-left: 1rem;
+                            align-items: center;
                           }
                           .navbar__media {
                             display: block;
