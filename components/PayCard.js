@@ -18,7 +18,8 @@ export default function PayCard (props) {
             <style jsx>
                 {`
                 .pay-card {
-                width: 13rem;
+                width: 100%;
+                max-width: 16.5rem;
                 margin: 1rem 0;
                 padding: 1rem;
                 border: solid 1px;

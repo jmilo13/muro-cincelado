@@ -41,21 +41,10 @@ p {
 .post__content h2{
   margin: 2rem 0 1.5rem 0;
 }
-.post__content img{
-  display: block;
-  width: 100%;
-  max-width: 40rem;
-  margin: auto;
-}
 .post__content blockquote{
   font-style: oblique;
   padding-left: 1.5rem;
   border-left: 2px solid var(--primary-color);
-}
-.photo-link{
-  display: block;
-  text-align: center;
-  font-size: 0.8rem;
 }
 .post__content ul{
   padding-left: 20px

@@ -63,10 +63,11 @@ const Atention = () => {
                     padding: 3rem 2rem;
                     }
                     .atention__list {
-                    padding: 1rem 2rem;
+                    padding: 1rem;
                     }
                     .atention__way-to-pay {
                     display: flex;
+                    gap:1rem;
                     flex-wrap: wrap;
                     justify-content: space-evenly;
                     }

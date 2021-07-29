@@ -3,6 +3,7 @@ import { getFileBySlug, getFiles } from "lib/mdx"
 import { MDXRemote } from "next-mdx-remote"
 import Link from "next/link"
 import CallToAction from '@components/CallToAction'
+import MDXComponents from "@components/MDXComponents"
 
 export default function Post({ source, frontmatter }) {
     const { title, autor, autorURL, date, category, imageURL, imageAutor, imageAutorURL } = frontmatter
@@ -19,9 +20,13 @@ export default function Post({ source, frontmatter }) {
                     <p>{category}</p>
                 </div>
                 <div className="post__content">
-                    <MDXRemote {...source} />
+                    <MDXRemote {...source} components={MDXComponents}/>
                     <strong>Si estas atravesando por alguna situación relacionada con este u otros temas y consideras que necesitas asistencia psicológica escríbeme. El cuidado de la salud mental es muy importante.</strong>
-                    <CallToAction link="https://api.whatsapp.com/message/LBT3GA3KFI23E1" text="Contactar" external={true}/>
+                    <CallToAction
+                        link="https://wa.me/message/LBT3GA3KFI23E1"
+                        text= 'Contactar'
+                        external={true}
+                    />
                 </div>
                 
             </section>
@@ -33,7 +38,7 @@ export default function Post({ source, frontmatter }) {
                     padding: 1.5rem;
                 }
                 .post__title{
-                    min-height: 15rem;
+                    min-height: 20rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -57,8 +62,8 @@ export default function Post({ source, frontmatter }) {
                 }
                 .post__title-image-info{
                     position: absolute;
-                    right: 0;
-                    bottom: -50px;
+                    right: 1rem;
+                    bottom: -3rem;
                     color: black;
                     font-size: 0.8rem;
                 }
