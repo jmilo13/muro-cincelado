@@ -58,7 +58,7 @@ export default function Post({ source, frontmatter }) {
                     z-index: 0;
                     text-align: center;
                     max-width: 38rem;
-                    padding: 2rem 0;
+                    padding: 2rem 1rem;
                 }
                 .post__title-image-info{
                     position: absolute;
