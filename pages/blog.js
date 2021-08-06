@@ -10,7 +10,7 @@ export default function blog({posts}) {
             <section className="blog">
              <h1 className="blog__title">Últimos artículos</h1>
                 {posts.map(post => {
-                    const { title, date, category, imageURL, slug} = post
+                    const { title, date, category, imageURL, slug, autor} = post
                     return (
                         <BlogCard 
                             key={slug}
@@ -19,6 +19,7 @@ export default function blog({posts}) {
                             category={category}
                             imageURL={imageURL}
                             slug={slug}
+                            autor={autor}
                         />
                     )
                 })}            
@@ -28,13 +29,14 @@ export default function blog({posts}) {
                         display: flex;
                         justify-content: center;
                         flex-wrap: wrap;
-                        max-width: 60rem;
+                        max-width: 70rem;
                         margin: auto;
                         padding: 3rem 2rem;
-                        gap: 1rem;
+                        gap: 2rem;
                     }
                     .blog__title{
-                        width: 100%
+                        width: 100%;
+                        text-align: center;
                     }
                 `}
                 </style>

@@ -27,12 +27,12 @@ class Navbar extends React.Component {
                         </li>
                         <li className="navbar__element">
                           <Link href="/psicologo-camilo-gonzalez">
-                            <a onClick={this.handleClick}>Ps. Camilo Gonzalez</a>
+                            <a onClick={this.handleClick}>Terapeuta</a>
                           </Link>
                         </li>
                         <li className="navbar__element">
                           <Link href="/modalidad-de-intervencion"> 
-                            <a onClick={this.handleClick}>¿Cómo me atiendo?</a>
+                            <a onClick={this.handleClick}>Indicaciones consulta</a>
                           </Link>
                         </li>
                         <li className="navbar__element">
