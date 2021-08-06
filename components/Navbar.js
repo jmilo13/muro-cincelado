@@ -1,12 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import CallToAction from '@components/CallToAction'
 
 
 class Navbar extends React.Component {
     handleClick(){
-      console.log('oprimido fuer del if')
+      //se ejecuta en todos los enlaces para ocultar el menu movil al renderizar
         if (window.innerWidth < 945) {
-          console.log('oprimido')
             const menu = document.querySelector('.navbar')
             const button = document.querySelector('.navbar__button-menu')
             const styleTransform = menu.style.transform
@@ -23,7 +23,8 @@ class Navbar extends React.Component {
                         <li className="navbar__element">
                           <Link href="/">
                             <a onClick={this.handleClick}>Inicio</a>
-                          </Link></li>
+                          </Link>
+                        </li>
                         <li className="navbar__element">
                           <Link href="/psicologo-camilo-gonzalez">
                             <a onClick={this.handleClick}>Ps. Camilo Gonzalez</a>
@@ -32,13 +33,25 @@ class Navbar extends React.Component {
                         <li className="navbar__element">
                           <Link href="/modalidad-de-intervencion"> 
                             <a onClick={this.handleClick}>¿Cómo me atiendo?</a>
-                          </Link></li>
-                        <li className="navbar__element"><a href="https://api.whatsapp.com/message/LBT3GA3KFI23E1" target="_blank" rel='noreferrer noopener'>Pedir Turno</a></li>
+                          </Link>
+                        </li>
+                        <li className="navbar__element">
+                          <Link href="/blog"> 
+                            <a onClick={this.handleClick}>Blog</a>
+                          </Link>
+                        </li>
+                        <li className="navbar__element">
+                          <CallToAction 
+                            link="https://wa.me/message/LBT3GA3KFI23E1"
+                            text='Turno'
+                            external={true}
+                          />
+                        </li>
                     </ul>
                     <div className="navbar__social">
-                        <a href={this.props.linkOne} target="_blank" rel='noreferrer noopener'><img src={this.props.socialOne} className="navbar__media"/></a>
-                        <a href={this.props.linkTwo} target="_blank" rel='noreferrer noopener'><img src={this.props.socialTwo} className="navbar__media"/></a>
-                        <a href={this.props.linkThree} target="_blank" rel='noreferrer noopener'><img src={this.props.socialThree} className="navbar__media"/></a>
+                      <a href={this.props.linkOne} target="_blank" rel='noreferrer noopener'><img src={this.props.socialOne} className="navbar__media"/></a>
+                      <a href={this.props.linkTwo} target="_blank" rel='noreferrer noopener'><img src={this.props.socialTwo} className="navbar__media"/></a>
+                      <a href={this.props.linkThree} target="_blank" rel='noreferrer noopener'><img src={this.props.socialThree} className="navbar__media"/></a>
                     </div>
                 </div>
                 <button className="navbar__button-menu" type="button" onClick={this.handleClick}></button>
@@ -95,10 +108,7 @@ class Navbar extends React.Component {
                             display: none;
                           }
                           .navbar__social {
-                            display: flex;
-                            justify-content: space-between;
-                            margin-left: 1rem;
-                            align-items: center;
+                            display: none
                           }
                           .navbar__media {
                             display: block;
@@ -138,6 +148,7 @@ class Navbar extends React.Component {
                               border-bottom: solid #c7c7c7;
                             }
                             .navbar__social {
+                              display: flex;
                               min-width: 10rem;
                               margin: 0;
                               justify-content: space-between;

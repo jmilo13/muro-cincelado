@@ -9,11 +9,13 @@ export default function Hero (props) {
                     <h2 className="hero__title">{title}</h2>
                     <h3 className="hero__subtitle">{subtitle}</h3>
                     <p className="hero__text">{children}</p>
-                    <CallToAction
-                        link="https://wa.me/message/LBT3GA3KFI23E1"
-                        text={buttonText}
-                        external={true}
-                    />
+                    <div className='hero__button'>
+                        <CallToAction
+                            link="https://wa.me/message/LBT3GA3KFI23E1"
+                            text={buttonText}
+                            external={true}
+                        />
+                    </div>
                 </div>
                 <style jsx>
                     {`
@@ -49,6 +51,10 @@ export default function Hero (props) {
                     .hero__text {
                     font-size: 1.1rem;
                     margin: 1rem;
+                    }
+                    .hero__button{
+                    width: fit-content;
+                    margin: auto
                     }
                     @media (max-width: 59rem) {
                     .hero {

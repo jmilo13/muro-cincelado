@@ -14,10 +14,13 @@ export default function PresentationCard (props) {
                     <figcaption className="presentation__caption">{studies}</figcaption>
                 </figure>
                 <p className="presentation__invitation">{invitation}</p>
-                <CallToAction 
-                    link={link}
-                    text="Presentación"
-                />
+                <div className='presentation__button'>
+                    <CallToAction 
+                        link={link}
+                        text="Presentación"
+                    />
+                </div>
+                
                 <style jsx>
                     {`
                     .presentation {
@@ -36,6 +39,10 @@ export default function PresentationCard (props) {
                     }
                     .presentation__invitation {
                     margin: 1.5 0;
+                    }
+                    .presentation__button{
+                    width: fit-content;
+                    margin: auto
                     }
                     `}
                 </style>

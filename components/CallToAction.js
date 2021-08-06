@@ -18,7 +18,6 @@ export default function Service (props) {
                         display: block;
                         width: max-content;
                         padding: 0.7rem 2rem;
-                        margin: 2rem auto;
                         background: var(--primary-color);
                         text-decoration: none;
                         color: var(--letter-on-dark);

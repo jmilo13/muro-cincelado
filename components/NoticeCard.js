@@ -12,11 +12,13 @@ export default function Notice (props) {
                 <img className="notice__image" src={src} alt={alt} layout='fill'/>
                 </div>
                 <div>
-                <p className="notice__information">{children}</p>
-                <CallToAction 
-                    link={link}
-                    text="Guía"
-                />
+                    <p className="notice__information">{children}</p>
+                    <div className='notice__button'>
+                        <CallToAction 
+                            link={link}
+                            text="Guía"
+                        />
+                    </div>
                 </div>
                 <style jsx>
                     {`
@@ -34,6 +36,10 @@ export default function Notice (props) {
                     .notice__information {
                     width: 20rem;
                     margin: 1rem 0;
+                    }
+                    .notice__button{
+                    width: fit-content;
+                    margin: auto
                     }
                     `}
                 </style>
