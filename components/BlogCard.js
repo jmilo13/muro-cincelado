@@ -25,8 +25,8 @@ export default function BlogCard (props){
                     position: relative;
                     display: flex;
                     align-items: flex-end;
-                    width: 90%;
-                    max-width: 18rem;
+                    width: 100%;
+                    max-width: 18.5rem;
                     height: 25rem;
                     box-shadow: 0px 0px 9px 0px;
                     transition: all 500ms;

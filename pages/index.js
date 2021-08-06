@@ -17,7 +17,7 @@ export default class Home extends React.Component {
             <Head>
                 <title>Muro Cincelado - Inicio</title>
                 <meta name="description" content="La psicoterapia es una herramienta efectiva para el tratamiento de dificultades a nivel emocional o psicológico. Aquí podras encontrar apoyo y orientación especialmente sobre la diversidad en la sexualidad humana."></meta>
-                <meta property='og:image' content= '/images/logoCircle.png' />
+                <meta property='og:image' content= '/images/logo-circle.png' />
             </Head>
             <main className="main"> 
                 <Hero 

@@ -9,6 +9,7 @@ const Autor = () => {
             <Head>
                 <title>Ps. Camilo Gonzalez</title>
                 <meta name="description" content="Psicólogo egrsado de la Universidad Santo Tomas, Bogotá, Colombia. Con experiencia en el abordaje de temas relacionados a la sexualidad humana en su diversidad de géneros, orientaciones y organizaciones relacionales."></meta>
+                <meta property='og:image' content= '/image/profile-picture.png' />
             </Head>
             <main className="main"> 
                 <article className="autor">
@@ -60,11 +61,11 @@ const Autor = () => {
                         <p>
                         <Link href="/modalidad-de-intervencion">Aqui </Link>puedes consultar la modalidad de atención y tarifas. 
                         
-                        {/* Si te interesa
+                        Si te interesa
                         conocer un poco más de mi pensamiento te invito a leer algunos de
-                        los <a href="https://murocincelado.com/articulos/">textos </a>que he
+                        los <Link href="/blog">textos </Link>que he
                         escrito. Espero me elijas como tu psicólogo, estare emocionado de
-                        apoyarte en tu camino. */}
+                        apoyarte en tu camino.
                         </p>
                     </div>
                 </article>

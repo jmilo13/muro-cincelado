@@ -1,13 +1,22 @@
 import React from "react"
 import { getFileBySlug, getFiles } from "lib/mdx"
 import { MDXRemote } from "next-mdx-remote"
+import Head from 'next/head'
 import Link from "next/link"
 import CallToAction from '@components/CallToAction'
 import MDXComponents from "@components/MDXComponents"
 
 export default function Post({ source, frontmatter }) {
-    const { title, autor, autorURL, date, category, imageURL, imageAutor, imageAutorURL } = frontmatter
+    const { title, autor, autorURL, date, category, imageURL, imageAutor, imageAutorURL, description } = frontmatter
     return (
+        <React.Fragment>
+        <Head>
+            <meta property='og:type' content='article' />
+            <meta property='og:title' content={title}/>
+            <meta property='og:description' content={description} />
+            <meta property='og:image' content= {imageURL} />
+            <meta property='og:site_name' content='Muro Cincelado' />
+        </Head>
         <article className='post'>
             <header className="post__title">
                 <h1>{title}</h1>
@@ -86,6 +95,7 @@ export default function Post({ source, frontmatter }) {
                 `}
             </style>
         </article>
+        </React.Fragment>
     )
 }
 

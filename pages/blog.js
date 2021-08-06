@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import { getAllFilesMetadata } from "lib/mdx"
 import BlogCard from '@components/BlogCard'
 
@@ -6,6 +7,11 @@ export default function blog({posts}) {
     posts.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     return (
         <React.Fragment>
+            <Head>
+                <title>Blog</title>
+                <meta name="description" content="Algunos artículos relacionados con la sexualidad humana que te invito a leer. Espero los disfrutes y si tienes consultas no dudes en escribir"></meta>
+                <meta property='og:image' content= '/image/logo-circle.png' />
+            </Head>
             <section className="blog">
              <h1 className="blog__title">Últimos artículos</h1>
                 {posts.map(post => {

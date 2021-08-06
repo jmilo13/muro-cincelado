@@ -10,6 +10,7 @@ const Atention = () => {
             <Head>
                 <title>Modalidad de intervención</title>
                 <meta name="description" content="Aquí encontrarás una guía para concertar tu cita y la modalidad de atención remota, en relación a la pandemia de COVID-19."></meta>
+                <meta property='og:image' content= '/image/logo-circle.png' />
             </Head>
             <main className="main"> 
                 <article className="atention">
