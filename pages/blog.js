@@ -3,7 +3,6 @@ import { getAllFilesMetadata } from "lib/mdx"
 import BlogCard from '@components/BlogCard'
 
 export default function blog({posts}) {
-    console.log(posts)
     posts.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     return (
         <React.Fragment>

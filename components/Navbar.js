@@ -32,7 +32,7 @@ class Navbar extends React.Component {
                         </li>
                         <li className="navbar__element">
                           <Link href="/modalidad-de-intervencion"> 
-                            <a onClick={this.handleClick}>Indicaciones consulta</a>
+                            <a onClick={this.handleClick}>Proceso</a>
                           </Link>
                         </li>
                         <li className="navbar__element">
