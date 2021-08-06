@@ -25,8 +25,9 @@ export default function PayCard (props) {
                 border: solid 1px;
                 border-radius: 0.8rem;
                 }
-                .pay-card__button a {
-                margin-left: 0;
+                .pay-card__button {
+                width: fit-content;
+                margin: 2rem auto
                 }
                 `}
             </style>

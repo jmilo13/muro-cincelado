@@ -24,7 +24,8 @@ export default function BlogCard (props){
                                     box-shadow: 0px 0px 9px 0px;
                                     transition: all 500ms;
                                     cursor: pointer;
-                                    background: url(${imageURL}) center/cover no-repeat;            
+                                    background: url(${imageURL}) center/cover no-repeat;           
+                                    border-radius: 1rem; 
                                 }
                                 .blog-card:hover {
                                     transform: scale(1.05);
@@ -40,6 +41,7 @@ export default function BlogCard (props){
                                         rgba(0, 0, 0, 0) 100%
                                     );
                                     color: #fff;
+                                    border-radius: 0 0 1rem 1rem;
                                 }
                                 `}
                             </style>

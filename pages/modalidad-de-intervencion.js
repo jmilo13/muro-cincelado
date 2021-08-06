@@ -20,11 +20,13 @@ const Atention = () => {
                         </p>
                         <ol className="atention__list">
                             <li>Contactate para resolver cualquier duda y agendar una cita.</li>
-                            <CallToAction 
-                                link="https://wa.me/message/LBT3GA3KFI23E1"
-                                text='Pedir Turno'
-                                external={true}
-                            />
+                            <div className="atention__button">
+                                <CallToAction 
+                                    link="https://wa.me/message/LBT3GA3KFI23E1"
+                                    text='Pedir Turno'
+                                    external={true}
+                                />
+                            </div>
                             <li>Paga el valor de acuerdo al país en el que recidas a través de los siguientes enlaces.
                                 <div className="atention__way-to-pay">
                                     <PayCard
@@ -61,6 +63,10 @@ const Atention = () => {
                     max-width: 60rem;
                     margin: auto;
                     padding: 3rem 2rem;
+                    }
+                    .atention__button {
+                    width: fit-content;
+                    margin: 2rem auto
                     }
                     .atention__list {
                     padding: 1rem;
