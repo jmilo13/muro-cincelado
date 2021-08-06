@@ -27,6 +27,7 @@ export default function TopUp () {
                     cursor: pointer;
                     opacity: 0.5;
                     transition: 0.2s;
+                    z-index: 1;
                 }
                 .top-up:hover{
                     opacity:1;
