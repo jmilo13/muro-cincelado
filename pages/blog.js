@@ -4,10 +4,11 @@ import BlogCard from '@components/BlogCard'
 
 export default function blog({posts}) {
     console.log(posts)
+    posts.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     return (
         <React.Fragment>
             <section className="blog">
-             <h1 className="blog__title">Un poco de lectura</h1>
+             <h1 className="blog__title">Últimos artículos</h1>
                 {posts.map(post => {
                     const { title, date, category, imageURL, slug} = post
                     return (

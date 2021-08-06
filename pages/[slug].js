@@ -22,11 +22,14 @@ export default function Post({ source, frontmatter }) {
                 <div className="post__content">
                     <MDXRemote {...source} components={MDXComponents}/>
                     <strong>Si estas atravesando por alguna situación relacionada con este u otros temas y consideras que necesitas asistencia psicológica escríbeme. El cuidado de la salud mental es muy importante.</strong>
-                    <CallToAction
-                        link="https://wa.me/message/LBT3GA3KFI23E1"
-                        text= 'Contactar'
-                        external={true}
-                    />
+                    <div className="post__button">
+                        <CallToAction
+                            link="https://wa.me/message/LBT3GA3KFI23E1"
+                            text= 'Contactar'
+                            external={true}
+                        />
+                    </div>
+                    
                 </div>
                 
             </section>
@@ -75,6 +78,10 @@ export default function Post({ source, frontmatter }) {
                     font-size: 0.8rem;
                     opacity: 0.8;
                     text-align: center;
+                }
+                .post__button {
+                    width: fit-content;
+                    margin: 2rem auto
                 }
                 `}
             </style>
