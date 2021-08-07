@@ -87,13 +87,13 @@ class Navbar extends React.Component {
                             display: flex;
                             width: 90%;
                             max-width: 45rem;
-                            justify-content: space-between;
+                            justify-content: flex-end;
+                            gap: 3rem;
                             align-items: center;
                             text-align: center;
                             list-style: none;
                           }
                           .navbar__element {
-                            padding: 1rem;
                             text-align: center;
                           }
                           .navbar__element a {

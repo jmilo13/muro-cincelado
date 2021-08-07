@@ -8,8 +8,8 @@ const Autor = () => {
             <React.Fragment>
             <Head>
                 <title>Ps. Camilo Gonzalez</title>
-                <meta name="description" content="Psicólogo egrsado de la Universidad Santo Tomas, Bogotá, Colombia. Con experiencia en el abordaje de temas relacionados a la sexualidad humana en su diversidad de géneros, orientaciones y organizaciones relacionales."></meta>
-                <meta property='og:image' content= '/image/profile-picture.png' />
+                <meta name="description" content="Psicólogo egresado de la Universidad Santo Tomas, Bogotá, Colombia. Con experiencia en el abordaje de temas relacionados a la sexualidad humana en su diversidad de géneros, orientaciones y organizaciones relacionales."></meta>
+                <meta property='og:image' content= '/image/profile-picture.jpg' /> 
             </Head>
             <main className="main"> 
                 <article className="autor">

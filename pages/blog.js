@@ -52,7 +52,6 @@ export default function blog({posts}) {
 
   export async function getStaticProps (){
     const posts = await getAllFilesMetadata()
-    console.log({posts})
     return {
         props: {posts}
     }
