@@ -42,7 +42,7 @@ class Navbar extends React.Component {
                         </li>
                         <li className="navbar__element">
                           <CallToAction 
-                            link="https://wa.me/message/LBT3GA3KFI23E1"
+                            link="https://wa.me/message/V7KKKDIRGD62K1"
                             text='Turno'
                             external={true}
                           />

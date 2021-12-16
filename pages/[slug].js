@@ -33,7 +33,7 @@ export default function Post({ source, frontmatter }) {
                     <strong>Si estas atravesando por alguna situación relacionada con este u otros temas y consideras que necesitas asistencia psicológica escríbeme. El cuidado de la salud mental es muy importante.</strong>
                     <div className="post__button">
                         <CallToAction
-                            link="https://wa.me/message/LBT3GA3KFI23E1"
+                            link="https://wa.me/message/V7KKKDIRGD62K1"
                             text= 'Contactar'
                             external={true}
                         />

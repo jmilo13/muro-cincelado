@@ -23,7 +23,7 @@ const Atention = () => {
                             <li>Contactate para resolver cualquier duda y agendar una cita.</li>
                             <div className="atention__button">
                                 <CallToAction 
-                                    link="https://wa.me/message/LBT3GA3KFI23E1"
+                                    link="https://wa.me/message/V7KKKDIRGD62K1"
                                     text='Pedir Turno'
                                     external={true}
                                 />

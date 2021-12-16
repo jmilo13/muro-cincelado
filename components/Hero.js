@@ -11,7 +11,7 @@ export default function Hero (props) {
                     <p className="hero__text">{children}</p>
                     <div className='hero__button'>
                         <CallToAction
-                            link="https://wa.me/message/LBT3GA3KFI23E1"
+                            link="https://wa.me/message/V7KKKDIRGD62K1"
                             text={buttonText}
                             external={true}
                         />
