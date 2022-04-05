@@ -1,40 +1,35 @@
 import React from "react"
-//import { getFileBySlug, getFiles } from "lib/mdx"
-//import { MDXRemote } from "next-mdx-remote"
+import { getFileBySlug, getFiles } from "lib/mdx"
+import { MDXRemote } from "next-mdx-remote"
 import Head from 'next/head'
 import Link from "next/link"
 import CallToAction from '@components/CallToAction'
-//import MDXComponents from "@components/MDXComponents"
-import { getAllPosts, getOnePost, renderBlock } from "lib/notion-functions"
+import MDXComponents from "@components/MDXComponents"
 
-export default function Post({ post }) {
-    //const { title, autor, autorURL, date, category, imageURL, imageAutor, imageAutorURL, description } = frontmatter
-    //console.log(window.location)
-    console.log(post)
-
+export default function Post({ source, frontmatter }) {
+    const { title, autor, autorURL, date, category, imageURL, imageAutor, imageAutorURL, description } = frontmatter
     return (
         <React.Fragment>
         <Head>
             <meta property='og:type' content='article' />
-            {/* <meta property='og:title' content={title}/>
+            <meta property='og:title' content={title}/>
             <meta property='og:description' content={description} />
-            <meta property='og:image' content= {imageURL} /> */}
+            <meta property='og:image' content= {imageURL} />
             <meta property='og:site_name' content='Muro Cincelado' />
         </Head>
         <article className='post'>
             <header className="post__title">
-                {/* <h1>{title}</h1>
-                <p className="post__title-image-info">Foto de <a href={imageAutorURL} target="_blank">{imageAutor}</a></p> */}
+                <h1>{title}</h1>
+                <p className="post__title-image-info">Foto de <a href={imageAutorURL} target="_blank">{imageAutor}</a></p>
             </header>
             <section className="post__body">
                 <div className="post__metadata">
-                    {/* <p><Link href={autorURL}>{autor}</Link></p>
+                    <p><Link href={autorURL}>{autor}</Link></p>
                     <p>{date}</p>
-                    <p>{category}</p> */}
+                    <p>{category}</p>
                 </div>
                 <div className="post__content">
-                    {post.results.map(item => renderBlock(item))}
-                    {/* <MDXRemote {...source} components={MDXComponents}/> */}
+                    <MDXRemote {...source} components={MDXComponents}/>
                     <strong>Si estas atravesando por alguna situación relacionada con este u otros temas y consideras que necesitas asistencia psicológica escríbeme. El cuidado de la salud mental es muy importante.</strong>
                     <div className="post__button">
                         <CallToAction
@@ -60,6 +55,7 @@ export default function Post({ post }) {
                     justify-content: center;
                     align-items: center;
                     position: relative;
+                    background: url(${imageURL}) center/cover no-repeat fixed;
                     color: #fff;
                 }
                 .post__title::before{
@@ -103,28 +99,23 @@ export default function Post({ post }) {
     )
 }
 
-export async function getStaticProps ({params}){
-    const posts = await getAllPosts()
-    const currentPost = posts.filter(post=>post.properties.slug.rich_text[0].plain_text === params.slug)
-    const post = await getOnePost(currentPost[0].id)
-
-    //const { source, frontmatter } = await getFileBySlug(params.slug)
+export async function getStaticProps ({ params }){
+    const { source, frontmatter } = await getFileBySlug(params.slug)
     return {
-        //props: { source, frontmatter }
-        props: {post} 
+        props: { source, frontmatter }
     }
 }
 
 export async function getStaticPaths() {
-    const posts = await getAllPosts()
+    const posts = await getFiles()
     const paths = posts.map((post) => ({
         params: {
-            slug: post.properties.slug.rich_text[0].plain_text,    
+            slug: post.replace(/\.mdx/, '')
         }
     })
     )
     return {
-        paths, 
+        paths,
         fallback: false
     }
 }
