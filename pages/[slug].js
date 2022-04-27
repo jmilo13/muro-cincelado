@@ -3,12 +3,12 @@ import Head from 'next/head'
 import Link from "next/link"
 
 import CallToAction from '@components/CallToAction'
-import { getAllPosts, getOnePost, renderBlock } from "lib/notion-functions"
+import { getAllPosts, getContentPost, renderBlock } from "lib/notion-functions"
 
-export default function Post({ post, currentPost}) {
+export default function Post({ contentPost, currentPost}) {
     const { title, autor, autorUrl, date, category, imageUrl, imageAutor, imageAutorUrl, description, slug } = currentPost[0].properties
-console.log(post.results)
-console.log(currentPost)
+console.log(contentPost.results)
+// console.log(currentPost)
     return (
         <React.Fragment>
         <Head>
@@ -34,8 +34,8 @@ console.log(currentPost)
                 </div>
                 <div className="post__content">
                     {
-                    post.results.map(item => {
-                        const nextItem = post.results[post.results.indexOf(item)+1]?.type === item.type
+                    contentPost.results.map(item => {
+                        const nextItem = contentPost.results[contentPost.results.indexOf(item)+1]?.type === item.type
                         return renderBlock(item, nextItem)
                     })} 
                     <strong>Si estas atravesando por alguna situación relacionada con este u otros temas y consideras que necesitas asistencia psicológica escríbeme. El cuidado de la salud mental es muy importante.</strong>
@@ -109,9 +109,9 @@ console.log(currentPost)
 export async function getStaticProps ({params}){
     const posts = await getAllPosts()
     const currentPost = posts.filter(post=>post.properties.slug.rich_text[0].plain_text === params.slug)
-    const post = await getOnePost(currentPost[0].id)
+    const contentPost = await getContentPost(currentPost[0].id)
     return {
-        props: {post, currentPost} 
+        props: {contentPost, currentPost} 
     }
 }
 
