@@ -52,6 +52,26 @@ p {
 .post__content li{
   margin: 1.5rem 0
 }
-.embebed {
+.post__content .embebed {
   padding-left: 25px;
+}
+.post__content .father > *{
+  margin-top: 0;
+}
+.post__content .image-container{
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  margin: auto;
+}
+.post__content .image-post {
+  width: 100%
+}
+.post__content .caption {
+width: fit-content;
+margin: auto;
+font-size: 12px;
+}
+.post__content blockquote {
+  margin: 16px 0;
 }
