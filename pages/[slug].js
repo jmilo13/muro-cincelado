@@ -16,6 +16,8 @@ export default function Post({ contentPost, currentPost}) {
             <meta property='og:description' content={description} />
             <meta property='og:image' content= {imageUrl.url} />
             <meta property='og:site_name' content='Muro Cincelado' />
+            <title>{title.title[0]?.plain_text}</title>
+            <meta name="descripción" content={description}></meta>
         </Head>
         <article className='post'>
             <header className="post__title">
