@@ -1,14 +1,13 @@
 import React from "react"
 import Head from 'next/head'
 import Link from "next/link"
+import { makeRandomId } from "lib/notion-functions"
 
 import CallToAction from '@components/CallToAction'
 import { getAllPosts, getContentPost, renderBlock } from "lib/notion-functions"
 
 export default function Post({ contentPost, currentPost}) {
     const { title, autor, autorUrl, date, category, imageUrl, imageAutor, imageAutorUrl, description, slug } = currentPost[0].properties
-console.log(contentPost.results)
-// console.log(currentPost)
     return (
         <React.Fragment>
         <Head>
@@ -18,9 +17,6 @@ console.log(contentPost.results)
             <meta property='og:image' content= {imageUrl.url} />
             <meta property='og:site_name' content='Muro Cincelado' />
         </Head>
-        <article>
-            {/* <NotionRenderer blockMap={post.results}/> */}
-        </article>
         <article className='post'>
             <header className="post__title">
                 <h1>{title.title[0]?.plain_text}</h1>
@@ -36,7 +32,7 @@ console.log(contentPost.results)
                     {
                     contentPost.results.map(item => {
                         const nextItem = contentPost.results[contentPost.results.indexOf(item)+1]?.type === item.type
-                        return renderBlock(item, nextItem)
+                        return <React.Fragment key={makeRandomId(6)}>{renderBlock(item, nextItem)}</React.Fragment> 
                     })} 
                     <strong>Si estas atravesando por alguna situación relacionada con este u otros temas y consideras que necesitas asistencia psicológica escríbeme. El cuidado de la salud mental es muy importante.</strong>
                     <div className="post__button">

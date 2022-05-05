@@ -1,8 +1,5 @@
 import React from "react"
-import { Client } from "@notionhq/client"
-import { renderBlock, Text } from "lib/notion-functions"
 import Head from 'next/head'
-import { getAllFilesMetadata } from "lib/mdx"
 import BlogCard from '@components/BlogCard'
 import { getAllPosts } from "lib/notion-functions"
 
@@ -19,7 +16,6 @@ export default function blog({posts}) {
              <h1 className="blog__title">Últimos artículos</h1>
                 {posts.map(post => {
                     const { title, date, category, imageUrl, slug, autor} = post.properties
-                    console.log(post)
                     return (
                         <BlogCard 
                             key={post.id}
@@ -55,7 +51,6 @@ export default function blog({posts}) {
   }
 
   export async function getStaticProps (){
-    const postsViejo = await getAllFilesMetadata()
     const data = await getAllPosts()
     const posts = data.filter(item => item.properties.estado.select.name === 'publicado')
     return {

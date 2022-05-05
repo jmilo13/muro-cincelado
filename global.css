@@ -36,6 +36,12 @@ h1 {
 p {
   margin: 1rem 0;
 }
+input[type="checkbox"]{
+  margin-right: 10px;
+}
+summary span {
+  margin-left: 10px;
+}
 
 /* MARKDOWN STYLES */
 .post__content h2{
