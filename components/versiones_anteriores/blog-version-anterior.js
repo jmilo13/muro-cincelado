@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 import Head from 'next/head'
+import { getAllFilesMetadata } from "lib/mdx"
 import BlogCard from '@components/BlogCard'
-import { getAllPosts } from "lib/notion-functions"
 
 export default function blog({posts}) {
-    //posts.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    posts.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     return (
         <React.Fragment>
             <Head>
@@ -15,16 +15,16 @@ export default function blog({posts}) {
             <section className="blog">
              <h1 className="blog__title">Últimos artículos</h1>
                 {posts.map(post => {
-                    const { title, date, category, imageUrl, slug, autor} = post.properties
+                    const { title, date, category, imageURL, slug, autor} = post
                     return (
                         <BlogCard 
-                            key={post.id}
-                            title={title.title[0]?.plain_text}
-                            date={date.date?.start}
-                            category={category.select?.name}
-                            imageURL={imageUrl.url}
-                            slug={slug.rich_text[0]?.plain_text}
-                            autor={autor.select?.name}
+                            key={slug}
+                            title={title}
+                            date={date}
+                            category={category}
+                            imageURL={imageURL}
+                            slug={slug}
+                            autor={autor}
                         />
                     )
                 })}            
@@ -51,9 +51,9 @@ export default function blog({posts}) {
   }
 
   export async function getStaticProps (){
-    const data = await getAllPosts()
-    const posts = data.filter(item => item.properties.estado.select.name === 'publicado')
+    const posts = await getAllFilesMetadata()
     return {
         props: {posts}
     }
 }
+
