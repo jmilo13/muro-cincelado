@@ -4,7 +4,6 @@ import BlogCard from '@components/BlogCard'
 import { getAllPosts } from "lib/notion-functions"
 
 export default function blog({posts}) {
-    //posts.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     return (
         <React.Fragment>
             <Head>
@@ -50,7 +49,7 @@ export default function blog({posts}) {
     )
   }
 
-  export async function getStaticProps (){
+  export async function getServerSideProps (){
     const data = await getAllPosts()
     const posts = data.filter(item => item.properties.estado.select.name === 'publicado')
     return {

@@ -104,25 +104,11 @@ export default function Post({ contentPost, currentPost}) {
     )
 }
 
-export async function getStaticProps ({params}){
+export async function getServerSideProps ({params}){
     const posts = await getAllPosts()
     const currentPost = posts.filter(post=>post.properties.slug.rich_text[0].plain_text === params.slug)
     const contentPost = await getContentPost(currentPost[0].id)
     return {
         props: {contentPost, currentPost} 
-    }
-}
-
-export async function getStaticPaths() {
-    const posts = await getAllPosts()
-    const paths = posts.map((post) => ({
-        params: {
-            slug: post.properties.slug.rich_text[0]?.plain_text || "",    
-        }
-    })
-    )
-    return {
-        paths, 
-        fallback: false
     }
 }
