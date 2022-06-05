@@ -39,7 +39,7 @@ const Atention = () => {
                                     />
                                     <PayCard
                                         country='Colombia'
-                                        price='COP 70.000'
+                                        price='COP 80.000'
                                         buttonText='Pagar'
                                         link='https://biz.payulatam.com/L0dc8f07BDCD3EB'
                                         options= 'Otras opciones: Transferencia directa (Bancolombia o Banco Caja Social'
