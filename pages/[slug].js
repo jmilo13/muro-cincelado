@@ -36,14 +36,6 @@ export default function Post({ contentPost, currentPost}) {
                         const nextItem = contentPost.results[contentPost.results.indexOf(item)+1]?.type === item.type
                         return <React.Fragment key={makeRandomId(6)}>{renderBlock(item, nextItem)}</React.Fragment> 
                     })} 
-                    <strong>Si estas atravesando por alguna situación relacionada con este u otros temas y consideras que necesitas asistencia psicológica escríbeme. El cuidado de la salud mental es muy importante.</strong>
-                    <div className="post__button">
-                        <CallToAction
-                            link="https://wa.me/message/V7KKKDIRGD62K1"
-                            text= 'Contactar'
-                            external={true}
-                        />
-                    </div>
                     
                 </div>
             </section>
