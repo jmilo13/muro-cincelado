@@ -3,16 +3,14 @@ import Link from 'next/link'
 
 export default function BlogCard (props){
     const { title, date, category, imageURL, slug, autor} = props
-    const newDate = new Date(date)
-    const formattedDate = newDate.getDate()
     return(
-    <Link href={`/${slug}`}>
         <div className="blog-card">
+            <Link href={`/${slug}`} className="blog-card__overlay" aria-label={title} />
             <div className="blog-card__details">
                 <h3>{title}</h3>
                 <div className= "blog-card__metadata">
                     <span className="blog__autor">
-                        <Link href="/psicologo-camilo-gonzalez"><a>{autor}</a></Link>
+                        <Link href="/psicologo-camilo-gonzalez">{autor}</Link>
                     </span>
                     <span className="blog__date">{date}</span>
                     <span className="blog__category">{category}</span>
@@ -37,6 +35,12 @@ export default function BlogCard (props){
                 .blog-card:hover {
                     transform: scale(1.05);
                 }
+                .blog-card :global(.blog-card__overlay) {
+                    position: absolute;
+                    inset: 0;
+                    z-index: 0;
+                    border-radius: 1rem;
+                }
                 .blog-card__details {
                     position: absolute;
                     bottom: 0;
@@ -49,6 +53,8 @@ export default function BlogCard (props){
                     );
                     color: var(--letter-on-dark);
                     border-radius: 0 0 1rem 1rem;
+                    z-index: 1;
+                    pointer-events: none;
                 }
                 .blog-card__metadata{
                     display: flex;
@@ -57,16 +63,16 @@ export default function BlogCard (props){
                 }
                 .blog__autor{
                     width: 100%;
+                    pointer-events: auto;
                 }
-                .blog__autor a{
+                .blog__autor :global(a){
                     color: var(--letter-on-dark);
                 }
-                .blog__autor a:hover{
+                .blog__autor :global(a:hover){
                     color: var(--primary-color)
                 }
                 `}
             </style>
         </div>
-    </Link>
     )
 }

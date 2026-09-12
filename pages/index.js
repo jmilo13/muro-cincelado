@@ -1,64 +1,57 @@
-import React from 'react'
+import React from "react"
 import Head from 'next/head'
-import Hero from '@components/Hero'
-import Services from '@components/Services'
-import PresentationCard from '@components/PresentationCard'
-import NoticeCard from '@components/NoticeCard'
-import { getAllFilesMetadata } from 'lib/mdx'
+import BlogCard from '@components/BlogCard'
+import { getAllPosts } from "lib/notion-functions"
 
-export default class Home extends React.Component {
-    constructor(props){
-        super(props)
-    }
-    render(){
-        return (
-            <React.Fragment>
+export default function blog({posts}) {
+    return (
+        <React.Fragment>
             <Head>
-                <title>Muro Cincelado - Inicio</title>
-                <meta name="description" content="La psicoterapia es una herramienta efectiva para el tratamiento de dificultades a nivel emocional o psicológico. Aquí podras encontrar apoyo y orientación especialmente sobre la diversidad en la sexualidad humana."></meta>
-                <meta property='og:image' content= '/images/logo-circle.png' />
+                <title>Blog</title>
+                <meta name="description" content="Algunos artículos relacionados con la sexualidad humana que te invito a leer. Espero los disfrutes y si tienes consultas no dudes en escribir"></meta>
+                <meta property='og:image' content= '/image/logo-circle.png' />
             </Head>
-            <main className="main"> 
-                <Hero 
-                    title="Psicoterapia"
-                    subtitle="¿Necesitas apoyo?"
-                    buttonText="Pedir turno"
-                >
-                    Esta es una herramienta efectiva para el tratamiento de dificultades a nivel emocional o psicológico, que afectan la relacion con nosotros mismos y nuestro entorno. 
-                </Hero>
-                <Services />
-                <PresentationCard 
-                    name="Ps. Camilo Gonzalez"    
-                    src={'/images/profile-picture.jpg'}   
-                    studies="Psicologo de la Universidad Santo Tomas. Bogotá D.C. Colombia"
-                    invitation="Te invito a leer un poco sobre mi"
-                    link="/psicologo-camilo-gonzalez"         
-                />
-                <NoticeCard
-                    title="Situación COVID"    
-                    src={'/images/covid.svg'}   
-                    alt="joven_con_mascarilla"
-                    link="/modalidad-de-intervencion"   
-                >
-                    Para garantizar la seguridad de los consultantes en el marco de la pandemia por COVID-19 se ha implementado la atención remota a través de videollamada por medio de Whatsapp. Si deseas mayor información te invito a leer los pasos para agendar tu cita.
-                </NoticeCard>
+            <section className="blog">
+             <h1 className="blog__title">Últimos artículos</h1>
+                {posts.map(post => {
+                    const { title, date, category, imageUrl, slug, autor} = post.properties
+                    return (
+                        <BlogCard 
+                            key={post.id}
+                            title={title.title[0]?.plain_text}
+                            date={date.date?.start}
+                            category={category.select?.name}
+                            imageURL={imageUrl.url}
+                            slug={slug.rich_text[0]?.plain_text}
+                            autor={autor.select?.name}
+                        />
+                    )
+                })}            
                 <style jsx>
                     {`
-                        .card-service-container {
-                            display: flex;
-                            flex-wrap: wrap;
-                            justify-content: space-evenly;
-                            }
-                    `}
+                    .blog{
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        max-width: 70rem;
+                        margin: auto;
+                        padding: 3rem 2rem;
+                        gap: 2rem;
+                    }
+                    .blog__title{
+                        width: 100%;
+                        text-align: center;
+                    }
+                `}
                 </style>
-            </main>
-            </React.Fragment>
-        )
-    }
-}
+            </section>
+        </React.Fragment>
+    )
+  }
 
-export async function getStaticProps(){
-    const posts = await getAllFilesMetadata()
+  export async function getServerSideProps (){
+    const data = await getAllPosts()
+    const posts = data.filter(item => item.properties.estado.select.name === 'publicado')
     return {
         props: {posts}
     }

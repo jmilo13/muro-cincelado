@@ -8,28 +8,30 @@ import '../global.css'
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter()
     const [load, setLoad] = useState(false)
-    useEffect(()=>{
-        const handleRouteChange = () => {
-            setLoad(true)
-        }
-        const handleRouteChangeOff = () => {
-            router.events.off('routeChangeStart', handleRouteChangeOff)
-            setLoad(false)
-            return () => {
-             router.events.off('routeChangeComplete', handleRouteChangeOff)
-            }
-        }
-        router.events.on('routeChangeStart', handleRouteChange)
-        router.events.on('routeChangeComplete', handleRouteChangeOff)
-    })
 
-    if(load){
+    useEffect(() => {
+        const handleRouteChangeStart = () => setLoad(true)
+        const handleRouteChangeDone = () => setLoad(false)
+
+        router.events.on('routeChangeStart', handleRouteChangeStart)
+        router.events.on('routeChangeComplete', handleRouteChangeDone)
+        router.events.on('routeChangeError', handleRouteChangeDone)
+
+        return () => {
+            router.events.off('routeChangeStart', handleRouteChangeStart)
+            router.events.off('routeChangeComplete', handleRouteChangeDone)
+            router.events.off('routeChangeError', handleRouteChangeDone)
+        }
+    }, [router.events])
+
+    if (load) {
        return <Loading />
-    }else{
-        return (     
+    }
+
+    return (
         <React.Fragment>
             <Head>
-                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <Layout>
@@ -37,6 +39,4 @@ export default function MyApp({ Component, pageProps }) {
             </Layout>
         </React.Fragment>
     )
-  }
 }
-  

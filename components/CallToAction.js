@@ -8,13 +8,13 @@ export default function Service (props) {
                 {external ?
                 <a href={link} className="button-link" target="_blank" rel='noreferrer noopener'>{text}</a>
                 :
-                    <Link href={link}>
-                        <a className="button-link">{text}</a>
+                    <Link href={link} className="button-link">
+                        {text}
                     </Link>
                 }
                 <style jsx>
                     {`
-                    .button-link {
+                    :global(.button-link) {
                         display: block;
                         width: max-content;
                         padding: 0.7rem 2rem;
@@ -25,7 +25,7 @@ export default function Service (props) {
                         font-size: 1.2rem;
                         transition: all 1s;
                       }
-                      .button-link:hover {
+                      :global(.button-link:hover) {
                         color: var(--letter-on-dark);
                         transform: scale(1.1);
                       }

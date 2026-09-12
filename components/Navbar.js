@@ -17,35 +17,20 @@ class Navbar extends React.Component {
     render(){
         return ( 
             <header className="header">
-                <Link href="/"><img className="header__logo" src={this.props.src} /></Link>
+                <Link href="/">
+                  <img className="header__logo" src={this.props.src} alt="Muro Cincelado" />
+                </Link>
                 <div className="navbar">
                     <ul className="navbar__list-elements">
                         <li className="navbar__element">
-                          <Link href="/">
-                            <a onClick={this.handleClick}>Inicio</a>
+                          <Link href="/" onClick={this.handleClick}>
+                            Blog
                           </Link>
                         </li>
                         <li className="navbar__element">
-                          <Link href="/psicologo-camilo-gonzalez">
-                            <a onClick={this.handleClick}>Terapeuta</a>
+                          <Link href="/psicologo-camilo-gonzalez" onClick={this.handleClick}>
+                            Autor
                           </Link>
-                        </li>
-                        <li className="navbar__element">
-                          <Link href="/modalidad-de-intervencion"> 
-                            <a onClick={this.handleClick}>Proceso</a>
-                          </Link>
-                        </li>
-                        <li className="navbar__element">
-                          <Link href="/blog"> 
-                            <a onClick={this.handleClick}>Blog</a>
-                          </Link>
-                        </li>
-                        <li className="navbar__element">
-                          <CallToAction 
-                            link="https://wa.me/message/V7KKKDIRGD62K1"
-                            text='Turno'
-                            external={true}
-                          />
                         </li>
                     </ul>
                     <div className="navbar__social">
@@ -62,12 +47,12 @@ class Navbar extends React.Component {
                             position: sticky;
                             top: 0;
                             display: flex;
-                            padding: 0.5rem 1rem;
+                            padding: 0.5rem 2rem;
                             align-items: center;
                             justify-content: space-between;
                             background: var(--background-nav);
                             box-shadow: 0px 3px 17px -9px rgb(0 0 0 / 75%);
-                            z-index: 1;
+                            z-index: 2;
                           }
                           .header__logo {
                             max-height: 4rem;
@@ -96,12 +81,14 @@ class Navbar extends React.Component {
                           .navbar__element {
                             text-align: center;
                           }
-                          .navbar__element a {
+                          .navbar__element a,
+                          .navbar__element :global(a) {
                             text-decoration: none;
                             color: var(--letter-on-white);
                             transition: 0.4s;
                           }
-                          .navbar__element a:hover {
+                          .navbar__element a:hover,
+                          .navbar__element :global(a:hover) {
                             color: var(--primary-color);
                           }
                           .navbar__button-menu {

@@ -35,7 +35,7 @@ export default function Layout (props) {
                 linkTwo= 'https://www.instagram.com/murocincelado.psicoterapia/'
                 socialThree={twitterC}
                 linkThree= 'https://twitter.com/murocincelado'
-                location='Ciudad autónoma de Buenos Aires, Argentina'
+                location='Bogotá, Colombia'
                 email='murocincelado@gmail.com'
                 license='https://creativecommons.org/licenses/by-sa/4.0/'
                 imageLicense={license}

@@ -12,7 +12,6 @@ export default function AutorImage(props){
                     height: 16rem;
                     border-radius: 50%;
                     object-fit: cover;
-                    transform: rotate(-22deg);
                 }
                 `}
             </style>
