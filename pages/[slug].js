@@ -106,9 +106,21 @@ export default function Post({ contentPost, currentPost}) {
 
 export async function getServerSideProps ({params}){
     const posts = await getAllPosts()
-    const currentPost = posts.filter(post=>post.properties.slug.rich_text[0].plain_text === params.slug)
+    const currentPost = (posts || []).filter(
+        post => post.properties?.slug?.rich_text?.[0]?.plain_text === params.slug
+    )
+
+    if (!currentPost.length) {
+        return { notFound: true }
+    }
+
     const contentPost = await getContentPost(currentPost[0].id)
+
+    if (!contentPost?.results) {
+        return { notFound: true }
+    }
+
     return {
-        props: {contentPost, currentPost} 
+        props: {contentPost, currentPost}
     }
 }
